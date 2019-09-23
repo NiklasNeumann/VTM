@@ -7,12 +7,14 @@ class Vampire
     protected $name;
     protected $gender;
 
+    /*
     protected $clan;
     protected $description;
     protected $weakness;
     protected $skill_1;
     protected $skill_2;
     protected $skill_3;
+
 
     public function __construct($_clan, $_description, $_weakness, $_skill_1, $_skill_2, $_skill_3)
     {
@@ -23,6 +25,7 @@ class Vampire
         $this->skill_2 = $_skill_2;
         $this->skill_3 = $_skill_3;
     }
+    */
 
     public function name()
     {
@@ -52,11 +55,12 @@ class Vampire
 
     public function skills()
     {
-        return "$this->skill_1  $this->skill_2  $this->skill_3";
+        return "Disciplines: $this->skill_1  $this->skill_2  $this->skill_3";
     }
 
     public function output()
     {
-        echo "Name: $this->name \n Gender: $this->gender \n Clan: $this->clan \n Description: $this->description \n";
+        echo "Name: $this->name \n Gender: $this->gender \n Clan: $this->clan \n Description: $this->description \n 
+        Weakness: $this->weakness \n";
     }
 }
