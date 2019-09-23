@@ -5,7 +5,7 @@ namespace VTM;
 class Vampire
 {
     protected $name;
-    protected $gender;
+    protected $gender = ["Male" or "Female"];
 
     /*
     protected $clan;
@@ -27,6 +27,12 @@ class Vampire
     }
     */
 
+    public function __construct($_name, $_gender)
+    {
+        $this->name = $_name;
+        $this->gender = $_gender;
+    }
+
     public function name()
     {
         return $this->name;
@@ -37,30 +43,8 @@ class Vampire
         return $this->gender;
     }
 
-    public function clan()
+    public function printBase()
     {
-        return $this->clan;
-    }
-
-    public function description()
-    {
-        return $this->description;
-    }
-
-    public function weakness()
-    {
-        return $this->weakness;
-    }
-
-
-    public function skills()
-    {
-        return "Disciplines: $this->skill_1  $this->skill_2  $this->skill_3";
-    }
-
-    public function output()
-    {
-        echo "Name: $this->name \n Gender: $this->gender \n Clan: $this->clan \n Description: $this->description \n 
-        Weakness: $this->weakness \n";
+        echo "Name: $this->name\n   Gender: $this->gender";
     }
 }

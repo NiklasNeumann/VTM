@@ -11,7 +11,7 @@ class Brujah extends Vampire
     protected $potence = "Potence grants a Vampire supernatural strength.";
     protected $presence = "Presence weakens surrounding groups of people, mostly without them noticing it.";
 
-    public function setBrujah($_clan, $_description, $_weakness, $_skill_1, $_skill_2, $_skill_3)
+    /*public function setBrujah($_clan, $_description, $_weakness, $_skill_1, $_skill_2, $_skill_3)
     {
         $this->clan = $_clan;
         $this->description = $_description;
@@ -19,5 +19,13 @@ class Brujah extends Vampire
         $this->celerity = $_skill_1;
         $this->potence = $_skill_2;
         $this->presence = $_skill_3;
+    }*/
+
+    public function showBrujah()
+    {
+        return "Clan: $this->clan\n
+        Description: $this->description\n
+        Weakness: $this->weakness\n
+        Skills: $this->celerity     $this->potence     $this->presence\n";
     }
 }

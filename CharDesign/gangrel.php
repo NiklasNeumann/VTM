@@ -2,7 +2,7 @@
 
 namespace VTM;
 
-class Gangrel extends Vampire
+class Gangrel
 {
     protected $clan = "Gangrel";
     protected $description = "Nomads who hold closer ties to the wild places than most of their city-bound cousins, they are also closer to the animal aspect of the Beast, and are masters of the Protean Discipline.";
@@ -19,5 +19,13 @@ class Gangrel extends Vampire
         $this->animalism = $_skill_1;
         $this->fortitude = $_skill_2;
         $this->protean = $_skill_3;
+    }
+
+    public function showGangrel()
+    {
+        return "Clan: $this->clan\n
+        Description: $this->description\n
+        Weakness: $this->weakness\n
+        Skills: $this->animalism     $this->fortitude     $this->protean\n";
     }
 }

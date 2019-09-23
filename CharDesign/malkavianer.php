@@ -2,7 +2,7 @@
 
 namespace VTM;
 
-class Malkavianer extends Vampire
+class Malkavianer
 {
     protected $description = "";
     protected $weakness = "";
